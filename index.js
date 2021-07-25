@@ -18,7 +18,7 @@ console.log(leadsFromLocalStorage)
 saveBtn.addEventListener("click", function () {
     myLeads.push(inputEl.value)
     console.log(myLeads)
-    ulEl.innerHTML += "<li> <a href=" + myLeads[myLeads.length -1] + " target=_blank>" + myLeads[myLeads.length -1] + "</a>"
+    ulEl.innerHTML += `<li> <a href= ${myLeads[myLeads.length -1]} target=_blank> ${myLeads[myLeads.length -1]} </a>`
     inputEl.value = ""
     localStorage.setItem("myLeads", JSON.stringify(myLeads))
     console.log(localStorage.getItem("myLeads"))
